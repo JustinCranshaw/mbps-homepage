@@ -1,0 +1,168 @@
+/* Teachers Section Styles */
+.teachers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teacher-section {
+  margin-bottom: 8rem;
+  padding: 2rem 0;
+}
+
+.teacher-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Teacher Content Wrapper - Clean, no boxes */
+.teacher-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.teacher-content-wrapper:hover {
+  transform: translateY(-2px);
+}
+
+/* Photo positioning */
+.photo-left {
+  grid-template-areas: "photo bio";
+}
+
+.photo-right {
+  grid-template-areas: "bio photo";
+}
+
+.teacher-photo {
+  grid-area: photo;
+}
+
+.teacher-bio-content {
+  grid-area: bio;
+}
+
+/* Teacher Photo */
+.teacher-photo {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.12),
+    0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  width: 70%; /* Slightly larger for better presence */
+  margin: 0 auto;
+}
+
+.teacher-content-wrapper:hover .teacher-photo {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-full-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Teacher Bio Content */
+.teacher-bio-content {
+  padding: 2rem 0;
+}
+
+.teacher-name {
+  font-family: var(--font-display);
+  margin: 0 0 2rem 0;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.teacher-bio-text {
+  line-height: 1.8;
+  margin: 0;
+  font-size: 1.125rem;
+  color: var(--granite);
+  max-width: 90%;
+}
+
+/* Teachers CTA */
+.teachers-cta {
+  margin-top: 8rem;
+  text-align: center;
+  padding: 4rem 0;
+  border-top: 1px solid rgba(146, 165, 115, 0.2);
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .teacher-content-wrapper {
+    gap: 4rem;
+  }
+  
+  .teacher-photo {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .teacher-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  /* Stack vertically on mobile, always photo first */
+  .photo-left,
+  .photo-right {
+    grid-template-areas: 
+      "photo"
+      "bio";
+  }
+  
+  .teacher-section {
+    margin-bottom: 5rem;
+    padding: 1rem 0;
+  }
+  
+  .teacher-photo {
+    width: 60%;
+  }
+  
+  .teacher-name {
+    font-size: 2.5rem;
+  }
+  
+  .teacher-bio-text {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .teacher-bio-content {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .teacher-section {
+    margin-bottom: 4rem;
+  }
+  
+  .teachers-cta {
+    margin-top: 5rem;
+    padding: 3rem 0;
+  }
+  
+  .teacher-photo {
+    width: 70%;
+  }
+}

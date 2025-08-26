@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="74.1072 80 251.7856 245.4728" width="251.786px" height="245.473px">
+  <g transform="matrix(1, 0, 0, 1, 200, 200)">
+    <path d="M 0,0 L 0,-120 L 40,-60 Z" fill="#ffeb3b" opacity="0.7" transform="rotate(0)"/>
+    <path d="M 0,0 L 0,-120 L -40,-60 Z" fill="#ffd54f" opacity="0.7" transform="rotate(0)"/>
+    <path d="M 0,0 L 0,-120 L 40,-60 Z" fill="#ff9800" opacity="0.7" transform="rotate(51.43)"/>
+    <path d="M 0,0 L 0,-120 L -40,-60 Z" fill="#ffa726" opacity="0.7" transform="rotate(51.43)"/>
+    <path d="M 0,0 L 0,-120 L 40,-60 Z" fill="#ff7043" opacity="0.7" transform="rotate(102.86)"/>
+    <path d="M 0,0 L 0,-120 L -40,-60 Z" fill="#ff8a65" opacity="0.7" transform="rotate(102.86)"/>
+    <path d="M 0,0 L 0,-120 L 40,-60 Z" fill="#f48fb1" opacity="0.7" transform="rotate(154.29)"/>
+    <path d="M 0,0 L 0,-120 L -40,-60 Z" fill="#f8bbd0" opacity="0.7" transform="rotate(154.29)"/>
+    <path d="M 0,0 L 0,-120 L 40,-60 Z" fill="#ce93d8" opacity="0.7" transform="rotate(205.71)"/>
+    <path d="M 0,0 L 0,-120 L -40,-60 Z" fill="#e1bee7" opacity="0.7" transform="rotate(205.71)"/>
+    <path d="M 0,0 L 0,-120 L 40,-60 Z" fill="#90caf9" opacity="0.7" transform="rotate(257.14)"/>
+    <path d="M 0,0 L 0,-120 L -40,-60 Z" fill="#bbdefb" opacity="0.7" transform="rotate(257.14)"/>
+    <path d="M 0,0 L 0,-120 L 40,-60 Z" fill="#a5d6a7" opacity="0.7" transform="rotate(308.57)"/>
+    <path d="M 0,0 L 0,-120 L -40,-60 Z" fill="#c8e6c9" opacity="0.7" transform="rotate(308.57)"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 200, 200)">
+    <path d="M 0,0 L 0,-80 L 25,-40 Z" fill="#fff59d" opacity="0.6" transform="rotate(25.71)"/>
+    <path d="M 0,0 L 0,-80 L -25,-40 Z" fill="#ffe082" opacity="0.6" transform="rotate(25.71)"/>
+    <path d="M 0,0 L 0,-80 L 25,-40 Z" fill="#ffccbc" opacity="0.6" transform="rotate(77.14)"/>
+    <path d="M 0,0 L 0,-80 L -25,-40 Z" fill="#ffab91" opacity="0.6" transform="rotate(77.14)"/>
+    <path d="M 0,0 L 0,-80 L 25,-40 Z" fill="#f8bbd0" opacity="0.6" transform="rotate(128.57)"/>
+    <path d="M 0,0 L 0,-80 L -25,-40 Z" fill="#f48fb1" opacity="0.6" transform="rotate(128.57)"/>
+    <path d="M 0,0 L 0,-80 L 25,-40 Z" fill="#e1bee7" opacity="0.6" transform="rotate(180)"/>
+    <path d="M 0,0 L 0,-80 L -25,-40 Z" fill="#ce93d8" opacity="0.6" transform="rotate(180)"/>
+    <path d="M 0,0 L 0,-80 L 25,-40 Z" fill="#c5cae9" opacity="0.6" transform="rotate(231.43)"/>
+    <path d="M 0,0 L 0,-80 L -25,-40 Z" fill="#9fa8da" opacity="0.6" transform="rotate(231.43)"/>
+    <path d="M 0,0 L 0,-80 L 25,-40 Z" fill="#b2dfdb" opacity="0.6" transform="rotate(282.86)"/>
+    <path d="M 0,0 L 0,-80 L -25,-40 Z" fill="#80cbc4" opacity="0.6" transform="rotate(282.86)"/>
+    <path d="M 0,0 L 0,-80 L 25,-40 Z" fill="#dcedc8" opacity="0.6" transform="rotate(334.29)"/>
+    <path d="M 0,0 L 0,-80 L -25,-40 Z" fill="#c5e1a5" opacity="0.6" transform="rotate(334.29)"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 200, 200)">
+    <circle r="35" fill="#fff8dc" opacity="0.5"/>
+    <circle r="25" fill="#ffe0b2" opacity="0.6"/>
+    <circle r="15" fill="#ffcc80" opacity="0.7"/>
+  </g>
+</svg>

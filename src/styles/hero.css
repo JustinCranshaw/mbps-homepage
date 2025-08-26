@@ -1,0 +1,461 @@
+/* Bright, Cheerful Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent; /* Remove conflicting background */
+}
+
+/* Flowing Ribbons Background with Motion */
+.ribbons-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70%;
+  z-index: 1; /* Below the three.js canvas (z-index: 2) */
+  overflow: hidden;
+}
+
+/* Animated Background Gradient */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent; /* Remove conflicting background */
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease-in-out infinite;
+}
+
+/* MBPS Logo in Hero Card */
+.hero-card-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.logo-hero {
+  width: 160px;
+  height: auto;
+  opacity: 0.85;
+}
+
+
+/* Ribbon anchor point - attached to hero content */
+.text-backdrop .ribbon-anchor {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, rgba(126, 211, 33, 0.5) 0%, rgba(126, 211, 33, 0.1) 70%, transparent 100%);
+  border-radius: 50%;
+  z-index: 15;
+  pointer-events: none;
+}
+
+/* Dynamic ribbon container */
+.dynamic-ribbons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /* cover full hero height so anchor stays in bounds */
+  pointer-events: none;
+  z-index: 20; /* Higher than hero-content (z-index: 10) */
+}
+
+
+
+/* Hero Content with Better Contrast */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.text-backdrop {
+  position: relative;
+  background: rgba(255, 255, 255, 0.66);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border-radius: 20px;
+  padding: 40px 36px;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.10),
+    0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  isolation: isolate; /* Create a new stacking context */
+}
+
+/* Subtle nature tint + inner hairline for polish */
+.text-backdrop::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(120% 120% at 20% 0%, rgba(126, 211, 33, 0.10) 0%, rgba(126, 211, 33, 0.06) 25%, rgba(255,255,255,0) 55%),
+              radial-gradient(140% 140% at 100% 100%, rgba(80, 227, 194, 0.06) 0%, rgba(255,255,255,0) 50%);
+  pointer-events: none;
+  z-index: -1; /* Send to back */
+}
+
+.text-backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: calc(20px - 1px);
+  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  z-index: -1; /* Send to back */
+}
+
+/* Typography with Perfect Contrast */
+.hero-title {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 144;
+  font-size: clamp(2.4rem, 7.5vw, 4.2rem);
+  font-weight: 700;
+  color: #2D5016;  /* Dark forest green for perfect contrast */
+  margin-top: 14px;
+  margin-bottom: 12px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-family: 'Amatic SC', cursive;
+  font-size: clamp(1.4rem, 3.6vw, 2.3rem);
+  font-weight: 700;
+  color: #52734D;  /* Medium green */
+  margin-top: 12px;
+  margin-bottom: 18px;
+  letter-spacing: 0.05em;
+}
+
+.hero-description {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+  color: #2D3748;  /* Stronger contrast for emphasis */
+  margin-top: 32px;
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Clean, Professional Buttons */
+.hero-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 24px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  width: 100%;
+  justify-content: center;
+  min-height: 48px;
+  box-sizing: border-box;
+}
+
+.hero-btn.primary {
+  background: linear-gradient(135deg, #D946EF 0%, #F472B6 50%, #FB7185 100%);
+  color: white;
+  box-shadow: 0 6px 16px rgba(217, 70, 239, 0.35);
+}
+
+.hero-btn.primary:hover {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(217, 70, 239, 0.4);
+}
+
+.hero-btn.secondary {
+  background: white;
+  color: #2D5016;
+  border-color: rgba(226, 232, 240, 0.9);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.hero-btn.secondary:hover {
+  background: #F7FAFC;
+  border-color: #CBD5E0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.hero-btn svg {
+  transition: transform 0.3s ease;
+  width: 18px;
+  height: 18px;
+}
+
+.hero-btn:hover svg {
+  transform: translateX(2px);
+}
+
+/* Decorative dots removed */
+
+/* Floating Natural Elements */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Organic Shapes - Subtle Natural Forms */
+.organic-shape {
+  position: absolute;
+  border-radius: 50% 40% 60% 30%;
+  opacity: 0.1;
+  animation: organicFloat 12s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 60px;
+  height: 80px;
+  background: radial-gradient(circle, #7ED321, #9AE65C);
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+.shape-2 {
+  width: 40px;
+  height: 60px;
+  background: radial-gradient(circle, #50E3C2, #4ECDC4);
+  top: 40%;
+  right: 20%;
+  animation-delay: 3s;
+  animation-duration: 18s;
+}
+
+.shape-3 {
+  width: 35px;
+  height: 45px;
+  background: radial-gradient(circle, #F5A623, #F8E71C);
+  top: 60%;
+  left: 25%;
+  animation-delay: 6s;
+  animation-duration: 12s;
+}
+
+.shape-4 {
+  width: 50px;
+  height: 70px;
+  background: radial-gradient(circle, #FF6B6B, #FF8E8E);
+  top: 30%;
+  right: 35%;
+  animation-delay: 9s;
+  animation-duration: 20s;
+}
+
+/* Floating Particles - Like Pollen or Light */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: particleFloat 8s linear infinite;
+}
+
+.particle-1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 12s;
+}
+
+.particle-2 {
+  top: 25%;
+  left: 30%;
+  animation-delay: 2s;
+  animation-duration: 10s;
+}
+
+.particle-3 {
+  top: 45%;
+  right: 25%;
+  animation-delay: 4s;
+  animation-duration: 14s;
+}
+
+.particle-4 {
+  top: 15%;
+  right: 15%;
+  animation-delay: 1s;
+  animation-duration: 11s;
+}
+
+.particle-5 {
+  top: 35%;
+  left: 50%;
+  animation-delay: 3s;
+  animation-duration: 13s;
+}
+
+.particle-6 {
+  top: 55%;
+  right: 40%;
+  animation-delay: 5s;
+  animation-duration: 9s;
+}
+
+/* Animation Keyframes */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes ribbonWave {
+  0%, 100% {
+    transform: translateY(0px) scaleY(1);
+  }
+  25% {
+    transform: translateY(-2px) scaleY(1.01);
+  }
+  50% {
+    transform: translateY(0px) scaleY(0.99);
+  }
+  75% {
+    transform: translateY(2px) scaleY(1.01);
+  }
+}
+
+/* Flutter for line-based ribbons */
+@keyframes lineFlutter {
+  0% {
+    transform: translateY(0) skewY(0deg);
+  }
+  20% {
+    transform: translateY(-2px) skewY(0.4deg);
+  }
+  40% {
+    transform: translateY(1px) skewY(-0.3deg);
+  }
+  60% {
+    transform: translateY(-1px) skewY(0.2deg);
+  }
+  80% {
+    transform: translateY(1px) skewY(-0.2deg);
+  }
+  100% {
+    transform: translateY(0) skewY(0deg);
+  }
+}
+
+@keyframes organicFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 0.1;
+  }
+  25% {
+    transform: translateY(-15px) rotate(5deg) scale(1.05);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(-8px) rotate(-3deg) scale(0.95);
+    opacity: 0.08;
+  }
+  75% {
+    transform: translateY(-20px) rotate(8deg) scale(1.1);
+    opacity: 0.12;
+  }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100px) translateX(20px);
+    opacity: 0;
+  }
+}
+
+/* dotPulse removed */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .text-backdrop {
+    padding: 36px 28px;
+    margin: 0 16px;
+    border-radius: 20px;
+  }
+  
+  .hero-buttons {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .hero-btn {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+  
+  .ribbons-bg {
+    height: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .hero-description {
+    font-size: 0.95rem;
+  }
+  
+  .text-backdrop {
+    padding: 28px 20px;
+  }
+}

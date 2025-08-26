@@ -1,0 +1,26 @@
+@import './styles/tokens.css';
+@import './styles/components.css';
+@import './styles/layout.css';
+@import './styles/hero.css';
+@import './styles/teachers.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global utilities that are not Tailwind-provided */
+.body-reset { /* utility placeholder if needed */ }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 80px 0; }
+
+/* Remove default browser margins so full-width sections truly reach the edges */
+html, body { margin: 0; padding: 0; }
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--morning-mist); }
+::-webkit-scrollbar-thumb { background: var(--fern); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--old-growth); }
