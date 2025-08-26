@@ -58,7 +58,7 @@ const Navigation = () => {
         <Link to="/" className="nav-logo">
           <div className="nav-logo-icon">
             <img 
-              src="/src/assets/mbps-logo.svg" 
+              src="/src/assets/mbps-logo-white.png" 
               alt="Mount Baker Preschool Logo" 
               className="logo-nav"
             />

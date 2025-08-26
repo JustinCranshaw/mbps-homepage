@@ -54,7 +54,7 @@ const HeroSection = () => {
           {/* MBPS Logo in hero card */}
           <div className="hero-card-logo">
             <img 
-              src="/src/assets/mbps-logo.svg" 
+              src="/src/assets/mbps-logo.png" 
               alt="Mount Baker Preschool Logo" 
               className="logo-hero"
             />
