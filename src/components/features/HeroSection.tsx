@@ -1,5 +1,6 @@
 import { DynamicRibbons } from './DynamicRibbons'
 import { RollingHillsBackground } from '../three/RollingHillsBackground'
+import heroLogo from '../../assets/mbps-logo.png'
 
 const HeroSection = () => {
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -54,7 +55,7 @@ const HeroSection = () => {
           {/* MBPS Logo in hero card */}
           <div className="hero-card-logo">
             <img 
-              src="/src/assets/mbps-logo.png" 
+              src={heroLogo}
               alt="Mount Baker Preschool Logo" 
               className="logo-hero"
             />

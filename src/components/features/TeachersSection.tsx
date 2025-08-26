@@ -1,17 +1,19 @@
 import Section from '../ui/Section'
+import imgCarolyn from '../../assets/images/carolyn.jpg'
+import imgAlyssa from '../../assets/images/alyssa.jpg'
 
 const TeachersSection = () => {
   const teachers = [
     {
       name: "Carolyn",
       role: "Co-Lead Teacher",
-      image: "/src/assets/images/carolyn.jpg",
+      image: imgCarolyn,
       bio: "Carolyn enjoys nurturing preschool children with songs, stories, art, nature and lots of time for imaginative play. Her three daughters are all MBPS alumni, and she loves the unique cooperative model of the school and the community that it provides. After seven cumulative years as a parent and assistant teacher at MBPS, she became a co-lead teacher in 2019. Outside of teaching she enjoys family time, yoga, board games, cooking, and sewing."
     },
     {
       name: "Alyssa",
       role: "Assistant Teacher",
-      image: "/src/assets/images/alyssa.jpg",
+      image: imgAlyssa,
       bio: "Alyssa is dedicated to early childhood education and building a sense of community and sociality between children. Through encouraging play and communication between students, she aims to build their sense of self and others. Since 2018, Alyssa has been a part of the MBPS community; her son and daughter are both proud alumni, and she became an assistant teacher in 2023. She has a bachelor's degree in education and has previously taught middle school math and science for nearly a decade. Away from school she loves gardening, spending time with her family, woodworking, crafting, and watching the UW Women's Basketball."
     }
   ]
