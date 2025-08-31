@@ -1,19 +1,5 @@
 /* Custom Fonts */
 @font-face {
-  font-family: 'Waldorf Bold';
-  src: url('../assets/fonts/Waldorfbold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Waldorf Italic';
-  src: url('../assets/fonts/Waldorfitalic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
   font-family: 'Baars Italic';
   src: url('../assets/fonts/baarsbi_.TTF') format('truetype');
   font-weight: bold;
@@ -157,9 +143,9 @@
 
 /* Professional Typography */
 .hero-title {
-  font-family: 'Waldorf Bold', 'Inter', sans-serif;
+  font-family: 'Waldorf', 'Inter', sans-serif;
   font-size: clamp(2.4rem, 6vw, 3.8rem);
-  font-weight: normal;
+  font-weight: 700;
   color: var(--forest-deep);
   margin-top: 4px;
   margin-bottom: 12px;

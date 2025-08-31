@@ -3,9 +3,17 @@
 
 @font-face {
   font-family: 'Waldorf';
-  src: url('../assets/fonts/Waldorfbold.ttf') format('truetype');
+  src: url('/fonts/Waldorfbold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Waldorf';
+  src: url('/fonts/Waldorfitalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
   font-display: swap;
 }
 
