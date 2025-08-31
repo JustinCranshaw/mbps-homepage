@@ -8,7 +8,7 @@ const TeachersSection = () => {
       name: "Carolyn",
       role: "Co-Lead Teacher",
       image: imgCarolyn,
-      bio: "Carolyn enjoys nurturing preschool children with songs, stories, art, nature and lots of time for imaginative play. Her three daughters are all MBPS alumni, and she loves the unique cooperative model of the school and the community that it provides. After seven cumulative years as a parent and assistant teacher at MBPS, she became a co-lead teacher in 2019. Outside of teaching she enjoys family time, yoga, board games, cooking, and sewing."
+      bio: "Carolyn enjoys nurturing preschool children with songs, stories, art, nature and lots of time for imaginative play. Her three daughters are all MBPS alumni, and she loves the unique cooperative model of the school and the community that it provides. After seven cumulative years as a parent and assistant teacher at MBPS, she became a lead teacher in 2019. Carolyn completed her Waldorf Early Childhood teacher training with Sound Circle Center. Outside of teaching she enjoys family time, yoga, board games, cooking, thrifting, and sewing."
     },
     {
       name: "Alyssa",

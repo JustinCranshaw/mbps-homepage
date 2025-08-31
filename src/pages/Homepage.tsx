@@ -94,6 +94,9 @@ const Homepage = () => {
                 As a cooperative, the teachers design and implement the curriculum, and parents work to support them in creating an environment where our children are free to learn, explore, and play safely. We believe young children learn best when they play freely and explore.
               </p>
               <p className="body-text">
+                As a Full Member of the Waldorf Early Childhood Association of North America (WECAN) and member of PCPO, we uphold the highest standards of Waldorf early childhood education.
+              </p>
+              <p className="body-text">
                 The classroom is intended to resemble a home with an emphasis on natural materials, the smells of grains cooking in the kitchen, and a large communal table for sharing meals.
               </p>
               <p className="body-text">

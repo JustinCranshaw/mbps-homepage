@@ -1,7 +1,7 @@
 /* Site Title Font */
 .site-title {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
+    font-family: 'Waldorf', cursive;
+    font-weight: 700;
 }
 
 /* Buttons */
@@ -20,25 +20,25 @@
 }
 
 .btn-primary {
-  background-color: var(--fern);
+  background: linear-gradient(135deg, var(--accent-primary-start) 0%, var(--accent-primary-mid) 55%, var(--accent-primary-end) 100%);
   color: white;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(var(--pink-rgb-1), 0.35);
 }
 
 .btn-primary:hover {
-  background-color: var(--old-growth);
+  filter: brightness(1.05);
   transform: translateY(-1px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px rgba(var(--pink-rgb-1), 0.4);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--fern);
-  border: 2px solid var(--fern);
+  color: var(--forest-deep);
+  border: 2px solid var(--forest-medium);
 }
 
 .btn-secondary:hover {
-  background-color: var(--fern);
+  background-color: var(--forest-medium);
   color: white;
 }
 
@@ -67,6 +67,7 @@
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(168, 181, 187, 0.2);
+  overflow: visible;
 }
 
 .nav-container {
@@ -77,6 +78,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  overflow: visible;
 }
 
 .nav-logo {
@@ -84,24 +86,45 @@
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: var(--old-growth);
+  color: var(--forest-deep);
+  overflow: visible;
 }
 
 .nav-logo-icon {
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, #D946EF 0%, #F472B6 50%, #FB7185 100%);
-  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: linear-gradient(135deg,
+    rgba(var(--cream-rgb), 0.95) 0%,
+    rgba(var(--pink-rgb-3), 0.9) 28%,
+    rgba(var(--pink-rgb-1), 0.85) 52%,
+    rgba(var(--butter-rgb-1), 0.6) 72%,
+    rgba(var(--white-rgb), 0.95) 100%
+  );
+  border: 2px solid var(--accent-primary-end);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: border-color 0.35s ease, background 0.45s ease, transform 0.3s ease, filter 0.3s ease;
+  box-sizing: border-box;
+  overflow: visible;
+  outline: 1px solid transparent;
+  outline-offset: 2px;
+  background-clip: padding-box;
+  box-shadow: none;
+  isolation: isolate;
 }
 
 .nav-logo:hover .nav-logo-icon {
   filter: brightness(1.05);
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: rgb(var(--pink-rgb-1));
+  background: linear-gradient(315deg,
+    rgba(var(--cream-rgb), 0.95) 0%,
+    rgba(var(--pink-rgb-1), 0.88) 30%,
+    rgba(var(--pink-rgb-3), 0.85) 58%,
+    rgba(var(--butter-rgb-1), 0.55) 80%,
+    rgba(var(--white-rgb), 0.95) 100%
+  );
   transform: translateY(-1px);
 }
 
@@ -109,8 +132,9 @@
   width: 40px;
   height: auto;
   opacity: 0.9;
-  filter: brightness(0) invert(1);
-  transition: opacity 0.3s ease, filter 0.3s ease;
+  filter: none;
+  transition: opacity 0.3s ease;
+  display: block;
 }
 
 .nav-logo:hover .logo-nav {
@@ -118,16 +142,15 @@
 }
 
 .nav-logo-text h1 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
-  font-family: 'Fraunces', serif;
-  font-variation-settings: 'opsz' 144;
+  font-family: 'Waldorf', cursive;
   margin: 0;
   line-height: 1.2;
 }
 
 .nav-logo-text p {
-  font-size: 12px;
+  font-size: 15px;
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -146,7 +169,8 @@
 .nav-link {
   text-decoration: none;
   color: var(--text-color);
-  font-weight: 500;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   transition: color 0.3s ease;
   position: relative;
@@ -154,7 +178,7 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--fern);
+  color: var(--forest-medium);
 }
 
 .nav-link.active::after {
@@ -164,7 +188,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: var(--fern);
+  background-color: var(--forest-medium);
   border-radius: 1px;
 }
 
@@ -206,7 +230,8 @@
 .nav-mobile-link {
   text-decoration: none;
   color: var(--text-color);
-  font-weight: 500;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
   padding: 12px 16px;
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -214,8 +239,8 @@
 
 .nav-mobile-link:hover,
 .nav-mobile-link.active {
-  color: var(--fern);
-  background-color: rgba(82, 115, 77, 0.1);
+  color: var(--forest-medium);
+  background-color: rgba(47, 107, 58, 0.1);
 }
 
 /* Hero */

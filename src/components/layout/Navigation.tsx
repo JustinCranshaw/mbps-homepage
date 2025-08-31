@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { MouseEvent } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import logoWhite from '../../assets/mbps-logo-white.png'
+import logoForest from '../../assets/mbps-logo-forest.png'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -59,14 +59,13 @@ const Navigation = () => {
         <Link to="/" className="nav-logo">
           <div className="nav-logo-icon">
             <img 
-              src={logoWhite}
+              src={logoForest}
               alt="Mount Baker Preschool Logo" 
               className="logo-nav"
             />
           </div>
           <div className="nav-logo-text">
             <h1 className="font-display site-title">Mount Baker Preschool</h1>
-            <p className="site-title">A Waldorf Cooperative</p>
           </div>
         </Link>
 

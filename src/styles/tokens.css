@@ -1,56 +1,72 @@
 /* Mount Baker Preschool Design Tokens */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Amatic+SC:wght@400;700&display=swap');
 
+@font-face {
+  font-family: 'Waldorf';
+  src: url('../assets/fonts/Waldorfbold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* ===== COLOR PALETTE ===== */
   
-  /* Primary Nature Colors */
-  --old-growth: #1B4332;
-  --fern: #52734D;
-  --morning-mist: #F0F4F5;
-  --puget-sound: #5C7A8B;
-  --granite: #8B8680;
-  --salmon: #E07B39;
+  /* Brand Greens (rich, complementary to pinks) */
+  --old-growth: #134E2E;           /* deep evergreen */
+  --fern: #2F6B3A;                 /* rich green */
+  --morning-mist: #F6F7F9;         /* soft cool gray/white */
+  --puget-sound: #5C7A8B;          /* slate blue */
+  --granite: #8B8680;              /* warm gray */
+  --salmon: #E07B39;               /* legacy accent */
   --rain-cloud: #A8B5BB;
   --bark: #3E2723;
   
-  /* Extended Color Palette */
-  --forest-deep: #2D5016;        /* Hero title color - darker forest green */
-  --forest-medium: #52734D;       /* Hero subtitle - medium green */
-  --slate-text: #2D3748;         /* Body text - high contrast */
+  /* Extended Palette */
+  --forest-deep: #134E2E;          /* primary heading */
+  --forest-medium: #2F6B3A;        /* secondary/accents */
+  --slate-text: #334155;           /* body text */
   --white-glass: rgba(255, 255, 255, 0.66);
   --white-pure: #ffffff;
-  --off-white: #F7FAFC;
+  --off-white: #FFF8F2;            /* warm cream */
   --border-light: rgba(226, 232, 240, 0.9);
   --border-medium: #CBD5E0;
   
   /* ===== TEXT COLOR HIERARCHY ===== */
   
   /* Primary Text Colors */
-  --text-primary: #2D5016;       /* Headings, strong emphasis - forest deep */
-  --text-secondary: #52734D;     /* Subheadings, medium emphasis - forest medium */
-  --text-body: #2D3748;          /* Body text, high readability - slate */
-  --text-muted: #718096;         /* Supporting text, captions */
-  --text-subtle: #A0AEC0;        /* Placeholder text, disabled states */
+  --text-primary: var(--forest-deep);
+  --text-secondary: var(--forest-medium);
+  --text-body: var(--slate-text);
+  --text-muted: #718096;
+  --text-subtle: #A0AEC0;
   
   /* Light Theme Text (on dark backgrounds) */
   --text-light: #ffffff;         /* White text for dark backgrounds */
   --text-light-muted: rgba(255, 255, 255, 0.8);
   --text-light-subtle: rgba(255, 255, 255, 0.6);
   
-  /* Accent Colors */
-  --accent-primary-start: #D946EF;
-  --accent-primary-mid: #F472B6;
-  --accent-primary-end: #FB7185;
-  --accent-nature-green: rgba(126, 211, 33, 0.10);
-  --accent-nature-teal: rgba(80, 227, 194, 0.06);
+  /* Accent Colors (pink ↔ peachy yellow with a touch of white) */
+  --accent-primary-start: #FFE4EF;   /* light petal */
+  --accent-primary-mid: #FFDDB3;     /* soft peach/yellow */
+  --accent-primary-end: #E879B7;     /* richer rose */
+  
+  /* Hero watercolor palette (RGB for alpha control) */
+  --pink-rgb-1: 248, 187, 217;      /* #F8BBD9 */
+  --pink-rgb-2: 232, 121, 183;      /* #E879B7 */
+  --pink-rgb-3: 255, 205, 220;      /* soft light */
+  --butter-rgb-1: 255, 239, 176;    /* #FFEFB0 */
+  --butter-rgb-2: 255, 226, 138;    /* #FFE28A */
+  --cream-rgb: 255, 248, 242;       /* #FFF8F2 */
+  --white-rgb: 255, 255, 255;
   
   /* ===== TYPOGRAPHY ===== */
   
   /* Font Families */
-  --font-display: 'Fraunces', serif;
+  --font-display: 'Inter', sans-serif;
   --font-accent: 'Amatic SC', cursive;
   --font-body: 'Inter', sans-serif;
+  --font-waldorf: 'Waldorf', cursive;
   
   /* Font Sizes - Responsive using clamp */
   --text-hero-title: clamp(2.4rem, 7.5vw, 4.2rem);
@@ -243,7 +259,7 @@
 
 .text-subheading {
   font-family: var(--font-accent);
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.125rem, 3vw, 1.75rem);
   font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-wide);
   color: var(--text-secondary);
@@ -349,6 +365,19 @@
   border-color: var(--border-medium);
   transform: translateY(-2px);
   box-shadow: var(--shadow-button-secondary-hover);
+}
+
+/* Forest (green) primary button to match hero style */
+.btn-forest {
+  background: linear-gradient(135deg, var(--forest-medium) 0%, var(--forest-deep) 100%);
+  color: var(--white-pure);
+  box-shadow: 0 4px 12px rgba(19, 78, 46, 0.28);
+}
+
+.btn-forest:hover {
+  background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest-medium) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(19, 78, 46, 0.35);
 }
 
 .btn-base svg {

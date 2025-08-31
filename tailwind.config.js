@@ -17,7 +17,7 @@ export default {
         'bark': '#3E2723',
       },
       fontFamily: {
-        display: ['Fraunces', 'serif'],
+        display: ['Inter', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
         accent: ['"Amatic SC"', 'cursive'],
       },
