@@ -17,6 +17,7 @@ import imgWonder from '../assets/images/spiral_2.jpg'
 import imgCurriculum from '../assets/images/gnomes.jpg'
 import imgInclusive from '../assets/images/mushrooms.jpg'
 import TeachersSection from '../components/features/TeachersSection'
+import AffiliationsCard from '../components/features/AffiliationsCard'
 
 const Homepage = () => {
   return (
@@ -91,10 +92,7 @@ const Homepage = () => {
             <div className="philosophy-text">
               <h3 className="display-text text-2xl text-old-growth mb-3">The Waldorf Curriculum</h3>
               <p className="body-text">
-                As a cooperative, the teachers design and implement the curriculum, and parents work to support them in creating an environment where our children are free to learn, explore, and play safely. We believe young children learn best when they play freely and explore.
-              </p>
-              <p className="body-text">
-                As a Full Member of the Waldorf Early Childhood Association of North America (WECAN) and member of PCPO, we uphold the highest standards of Waldorf early childhood education.
+                As a cooperative, the teachers design and implement the curriculum, and parents and caregivers work to support them in creating an environment where our children are free to learn, explore, and play safely. We believe young children learn best when they play freely and explore.
               </p>
               <p className="body-text">
                 The classroom is intended to resemble a home with an emphasis on natural materials, the smells of grains cooking in the kitchen, and a large communal table for sharing meals.
@@ -102,6 +100,9 @@ const Homepage = () => {
               <p className="body-text">
                 Our day flows with a predictable rhythm and alternates between periods of free play (outdoor and indoor) and coming together to share a meal, join in circle time, or gather at the art table for a quiet project. Working parents and teachers provide a general structure, model empathy, assist with transitions, aid in conflict resolution, and provide a nurturing environment.
               </p>
+              
+              {/* Affiliations Card */}
+              <AffiliationsCard />
             </div>
 
             <div className="philosophy-card-media">

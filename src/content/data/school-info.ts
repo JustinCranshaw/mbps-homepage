@@ -7,5 +7,5 @@ export const schoolInfo = {
    * Optional: Google Forms embed URL for inquiries.
    * Replace with the form's "embed" URL when ready.
    */
-  inquiryFormEmbedUrl: "https://docs.google.com/forms/d/e/1FAIpQLSddsd9RPTJEBhWJO_-sTxypuE8UPppau9BiZLKwJpizvNpdIA/viewform?embedded=true"
+  inquiryFormEmbedUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeAyvth3e3Iu0nRbnLaloUK-A4nn0R9Rg6Zaixvp4qiIkk85A/viewform?usp=header"
 }

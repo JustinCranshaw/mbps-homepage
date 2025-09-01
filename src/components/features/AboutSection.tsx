@@ -68,11 +68,11 @@ const AboutSection = () => {
             <p className="body-text mb-4">
               Each day flows with a predictable rhythm, alternating between free play and coming together as a community for meals, circle time, and quiet activities.
             </p>
-            <ul className="body-text space-y-2">
+            <ul className="facts-list">
               <li><span className="label">9am:</span> Arrival, outdoor play, seasonal circle, walk</li>
               <li><span className="label">10:30am:</span> Inside, bathroom and hand washing</li>
-              <li><span className="label">10:45am:</span> Circle and story</li>
-              <li><span className="label">11:00am:</span> Snack (whole grain and fruit or vegetable)</li>
+              <li><span className="label">11:00am:</span> Circle and story</li>
+              <li><span className="label">11:20am:</span> Snack (whole grain and fruit or vegetable)</li>
               <li><span className="label">11:20am:</span> Free play / artistic activity</li>
               <li><span className="label">12:10pm:</span> Bathroom and clean up</li>
               <li><span className="label">12:30pm:</span> Snack (whole grain and fruit or vegetable)</li>
@@ -88,5 +88,3 @@ const AboutSection = () => {
 }
 
 export default AboutSection
-
-
