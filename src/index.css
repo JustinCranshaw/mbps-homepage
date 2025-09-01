@@ -8,13 +8,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Use border-box universally to avoid width+padding overflow */
+*, *::before, *::after { box-sizing: border-box; }
+
 /* Global utilities that are not Tailwind-provided */
 .body-reset { /* utility placeholder if needed */ }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.section { padding: 80px 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; overflow-x: clip; }
+.section { padding: 80px 0; overflow-x: clip; }
 
 /* Remove default browser margins so full-width sections truly reach the edges */
 html, body { margin: 0; padding: 0; }
+
+/* Prevent horizontal overflow across the site */
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make all media responsive by default */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 /* Smooth scrolling */
 html { scroll-behavior: smooth; }

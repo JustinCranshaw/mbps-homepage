@@ -7,17 +7,24 @@
   margin-top: 40px; /* space before block */
   padding-block: clamp(14px, 2.25vw, 28px); /* ~10% reduction, still symmetric */
   max-width: 100%; /* ensure grid never exceeds parent */
+  width: 100%; /* explicitly set width */
+  box-sizing: border-box; /* include padding in width calculations */
+  overflow-x: clip; /* guard against child offsets/bullets */
 }
 
 /* Ensure children do not impose intrinsic min-width that breaks the grid */
 .about-two-col > * {
   min-width: 0;
+  max-width: 100%; /* prevent children from exceeding grid width */
+  box-sizing: border-box;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .about-two-col {
     grid-template-columns: 1fr;
-    gap: 32px; /* space between cards on mobile */
+    gap: 24px; /* tighter gap on mobile */
+    margin-top: 32px; /* reduce top margin on mobile */
+    padding-block: clamp(12px, 3vw, 20px); /* tighter padding */
   }
 }
 
@@ -53,10 +60,14 @@
 .page-wrapper {
   min-height: 100vh;
   background-color: var(--morning-mist);
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .main-content {
   padding-top: 70px; /* Account for fixed nav */
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 /* Link styling scoped to main content */
@@ -269,6 +280,8 @@
   gap: clamp(20px, 4vw, 40px);
   align-items: start; /* start alignment for better height control */
   max-width: min(1200px, 100%); /* prevent over-wide layouts */
+  width: 100%;
+  overflow-x: clip;
 }
 
 /* Earlier breakpoint since portrait images are more flexible */
@@ -383,12 +396,17 @@
   line-height: 1.1;
   letter-spacing: -0.015em;
   margin-top: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .accent-text {
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
   letter-spacing: 0.02em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .body-text {
@@ -396,6 +414,9 @@
   font-size: 1rem; /* consistent base font size */
   line-height: 1.7;
   color: var(--text-body);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 /* Section headers (alternative hierarchy) */
@@ -423,6 +444,7 @@
   max-width: 60ch !important; /* improve readability sitewide */
   margin-left: auto;
   margin-right: auto;
+  overflow-wrap: anywhere; /* prevent long words from pushing layout */
 }
 
 /* Enrollment intro paragraph left-aligned under centered title */
@@ -870,21 +892,27 @@
 .philosophy-card {
   padding: 0;
   overflow: hidden;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 .philosophy-card-media {
   position: relative;
   width: 100%;
+  max-width: 100%;
   /* 4:3 works well for desktop and stacks nicely on mobile */
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 16px;
+  box-sizing: border-box;
 }
 .philosophy-card-media img {
   width: 100%;
   height: 100%;
+  max-width: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
+  box-sizing: border-box;
 }
 .philosophy-card-content {
   padding: 20px 24px 24px;

@@ -68,6 +68,7 @@
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(168, 181, 187, 0.2);
   overflow: visible;
+  max-width: 100%;
 }
 
 .nav-container {
@@ -79,6 +80,7 @@
   margin: 0 auto;
   padding: 0 20px;
   overflow: visible;
+  width: 100%;
 }
 
 .nav-logo {
@@ -212,6 +214,7 @@
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(168, 181, 187, 0.2);
   padding: 20px;
+  max-width: 100%;
 }
 
 .nav-mobile-menu.open {
