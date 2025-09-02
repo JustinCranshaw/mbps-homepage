@@ -8,7 +8,7 @@
 
 /* Professional Hero Section */
 .hero {
-  height: calc(100vh - 70px);
+  min-height: 100svh;
   position: relative;
   display: flex;
   align-items: center;
@@ -101,6 +101,7 @@
   justify-content: center;
   align-items: center;
   align-self: center; /* ensure vertical centering within grid cell */
+  padding-top: 12px; /* ensure space from nav even when background spans full height */
 }
 
 .children-hero-image {
@@ -110,6 +111,7 @@
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   position: relative;
+  margin-top: 12px; /* breathing room below fixed nav */
 }
 
 .hero-image {
@@ -259,7 +261,7 @@
 /* Responsive Design */
 @media (max-width: 968px) {
   .hero {
-    height: calc(100vh - 70px);
+    min-height: 100svh;
     padding: 48px 0;
   }
   
@@ -279,7 +281,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: auto;
+    min-height: 100svh;
     padding: 40px 0;
   }
   
@@ -310,7 +312,7 @@
   
   .children-hero-image {
     height: 280px;
-    margin: 0 auto;
+    margin: 12px auto 0;
     max-width: 350px;
   }
   

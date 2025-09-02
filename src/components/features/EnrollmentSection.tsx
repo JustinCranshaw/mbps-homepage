@@ -37,10 +37,7 @@ const EnrollmentSection = () => {
         <div className="philosophy-text">
           <h3 className="display-text text-2xl text-old-growth mb-3">Co‑Op Classroom Model</h3>
           <p className="body-text mb-4">
-            Parents act as weekly classroom volunteers, take turns providing and preparing healthy snacks, hold a role
-            outside the classroom to help manage the school (e.g. publicity, maintenance, enrollment), assist with
-            fundraising efforts for our scholarship fund, and attend monthly parent meetings. Tuition is significantly
-            reduced for Co‑Op Classroom model families.
+            In our Co-Op Classroom model, parents contribute through weekly classroom volunteering, healthy snack preparation on a rotating basis, essential school management roles (including publicity, maintenance, and enrollment), fundraising support for our scholarship fund, and attendance at monthly parent meetings. In return for this collaborative commitment, participating families enjoy significantly reduced tuition costs.
           </p>
 
           <h4 className="display-text text-xl text-old-growth mb-2">2025/2026 Annual Tuition Options:</h4>
@@ -64,10 +61,7 @@ const EnrollmentSection = () => {
         <div className="philosophy-text">
           <h3 className="display-text text-2xl text-old-growth mb-3">Co‑Op Preschool Model</h3>
           <p className="body-text mb-4">
-            Families in the Co-Op Preschool model pay a higher tuition rate and omit the weekly classroom volunteer
-            commitment. Parents still hold a role outside the classroom to help manage the school, assist with
-            fundraising efforts for our scholarship fund, and attend monthly parent meetings. There are a limited
-            number of Co‑Op Preschool model spots available.
+            Our Co-Op Preschool model offers families a different level of involvement at a higher tuition rate. While parents are not required to volunteer weekly in the classroom, they still contribute through essential school management roles (including publicity, maintenance, and enrollment), fundraising support for our scholarship fund, and attendance at monthly parent meetings. Co-Op Preschool spots are limited.
           </p>
 
           <h4 className="display-text text-xl text-old-growth mb-2">2025/2026 Annual Tuition Options:</h4>

@@ -476,10 +476,10 @@
 /* Key Facts grid */
 #enrollment .facts-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* align with two-col sections */
+  grid-template-columns: 1.4fr 1fr; /* wider key facts card */
   gap: clamp(16px, 4vw, 40px);
   align-items: start;
-  max-width: min(1100px, 100%);
+  max-width: min(1200px, 100%);
   margin-left: auto;
   margin-right: auto;
   margin-top: clamp(16px, 2.5vw, 24px);
@@ -494,7 +494,8 @@
   list-style: none;
 }
 #enrollment .facts-text {
-  max-width: 52ch; /* narrower, improves readability */
+  max-width: none; /* allow card to use grid column width */
+  width: 100%;
 }
 
 
@@ -595,7 +596,7 @@
 
 @media (max-width: 900px) {
   #enrollment .facts-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* stack on small screens */
     gap: 20px;
   }
   #enrollment .facts-media img {
@@ -1075,6 +1076,13 @@
   .philosophy-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+  }
+}
+
+/* Ensure four-up layout on laptops/desktops when space allows */
+@media (min-width: 1101px) {
+  .philosophy-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
