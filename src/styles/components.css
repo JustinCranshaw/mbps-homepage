@@ -4,6 +4,141 @@
     font-weight: 700;
 }
 
+/* Open House Banner */
+.open-house-banner {
+  background: linear-gradient(135deg, var(--old-growth) 0%, var(--fern) 100%);
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  z-index: 15;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.open-house-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.open-house-banner-label {
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 13px;
+}
+
+.open-house-banner-divider {
+  opacity: 0.5;
+  margin: 0 4px;
+}
+
+.open-house-banner-dates {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.open-house-date {
+  font-weight: 500;
+}
+
+.open-house-banner-dot {
+  opacity: 0.5;
+}
+
+.open-house-banner-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-left: 8px;
+}
+
+.open-house-banner-cta:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(2px);
+}
+
+.open-house-banner-cta svg {
+  transition: transform 0.3s ease;
+}
+
+.open-house-banner-cta:hover svg {
+  transform: translateX(2px);
+}
+
+.open-house-banner-close {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.open-house-banner-close:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .open-house-banner {
+    padding: 12px 40px 12px 16px;
+    font-size: 13px;
+  }
+
+  .open-house-banner-content {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .open-house-banner-divider {
+    display: none;
+  }
+
+  .open-house-banner-dates {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .open-house-banner-dot {
+    display: none;
+  }
+
+  .open-house-banner-cta {
+    margin-left: 0;
+    margin-top: 4px;
+  }
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;

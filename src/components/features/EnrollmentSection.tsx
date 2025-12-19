@@ -14,6 +14,32 @@ const EnrollmentSection = () => {
         Join our warm, nature‑rich community where play sparks learning and friendships grow. Discover a joyful preschool rooted in curiosity, care, and connection.
       </p>
 
+      {/* Open House Section */}
+      <div className="open-house-section">
+        <div className="open-house-card">
+          <div className="open-house-header">
+            <h3 className="display-text text-2xl text-old-growth">🌟 Visit Us at Our Open House 🌟</h3>
+          </div>
+          <p className="body-text mb-4">
+            We warmly invite you to step inside our cozy classroom, meet our teachers, and our co-op community. No RSVP needed—just drop by and say hello. We can't wait to welcome you!
+          </p>
+          <div className="open-house-dates-grid">
+            <div className="open-house-date-card">
+              <span className="open-house-day">Saturday, January 31</span>
+              <span className="open-house-time">10:00 am – 12:00 pm</span>
+            </div>
+            <div className="open-house-date-card">
+              <span className="open-house-day">Saturday, February 8</span>
+              <span className="open-house-time">10:00 am – 12:00 pm</span>
+            </div>
+          </div>
+          <div className="open-house-address" style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+            <p className="body-text" style={{ margin: 0, lineHeight: '1.5' }}>722 30th Avenue South</p>
+            <p className="body-text" style={{ margin: 0, lineHeight: '1.5' }}>Seattle, WA 98144</p>
+          </div>
+        </div>
+      </div>
+
       <div className="facts-grid">
         <div className="facts-text facts-card card-organic">
           <h3 className="display-text facts-title">Key Facts</h3>
@@ -40,18 +66,18 @@ const EnrollmentSection = () => {
             In our Co-Op Classroom model, parents contribute through weekly classroom volunteering, healthy snack preparation on a rotating basis, essential school management roles (including publicity, maintenance, and enrollment), fundraising support for our scholarship fund, and attendance at monthly parent meetings. In return for this collaborative commitment, participating families enjoy significantly reduced tuition costs.
           </p>
 
-          <h4 className="display-text text-xl text-old-growth mb-2">2025/2026 Annual Tuition Options:</h4>
+          <h4 className="display-text text-xl text-old-growth mb-2">2026/2027 Annual Tuition Options:</h4>
           <ul className="body-text space-y-2 tuition-list">
             <li>
-              <span className="font-semibold">Three Days per Week: $4,237</span>
+              <span className="font-semibold">Three Days per Week: $4,661</span>
               <span className="tuition-days">(Mon – Wed or Tues – Thur)</span>
             </li>
             <li>
-              <span className="font-semibold">Four Days per Week: $5,361</span>
+              <span className="font-semibold">Four Days per Week: $5,898</span>
               <span className="tuition-days">(Mon – Thur or Tues – Fri)</span>
             </li>
             <li>
-              <span className="font-semibold">Five Days per Week: $6,356</span>
+              <span className="font-semibold">Five Days per Week: $6,992</span>
               <span className="tuition-days">(Mon – Fri)</span>
             </li>
           </ul>
@@ -64,18 +90,18 @@ const EnrollmentSection = () => {
             Our Co-Op Preschool model offers families a different level of involvement at a higher tuition rate. While parents are not required to volunteer weekly in the classroom, they still contribute through essential school management roles (including publicity, maintenance, and enrollment), fundraising support for our scholarship fund, and attendance at monthly parent meetings. Co-Op Preschool spots are limited.
           </p>
 
-          <h4 className="display-text text-xl text-old-growth mb-2">2025/2026 Annual Tuition Options:</h4>
+          <h4 className="display-text text-xl text-old-growth mb-2">2026/2027 Annual Tuition Options:</h4>
           <ul className="body-text space-y-2 tuition-list">
             <li>
-              <span className="font-semibold">Three Days per Week: $7,211</span>
+              <span className="font-semibold">Three Days per Week: $7,933</span>
               <span className="tuition-days">(Mon – Wed or Tues – Thur)</span>
             </li>
             <li>
-              <span className="font-semibold">Four Days per Week: $8,261</span>
+              <span className="font-semibold">Four Days per Week: $9,088</span>
               <span className="tuition-days">(Mon – Thur or Tues – Fri)</span>
             </li>
             <li>
-              <span className="font-semibold">Five Days per Week: $9,696</span>
+              <span className="font-semibold">Five Days per Week: $10,666</span>
               <span className="tuition-days">(Mon – Fri)</span>
             </li>
           </ul>
@@ -104,5 +130,3 @@ const EnrollmentSection = () => {
 }
 
 export default EnrollmentSection
-
-

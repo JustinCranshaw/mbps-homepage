@@ -455,6 +455,95 @@
   margin-bottom: clamp(12px, 2.5vw, 24px);
 }
 
+/* Open House Section */
+.open-house-section {
+  margin-bottom: clamp(24px, 4vw, 40px);
+}
+
+.open-house-card {
+  background: linear-gradient(135deg, rgba(27, 67, 50, 0.06) 0%, rgba(82, 115, 77, 0.08) 100%);
+  border: 2px solid rgba(82, 115, 77, 0.2);
+  border-radius: 20px;
+  padding: clamp(24px, 4vw, 36px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.open-house-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--old-growth) 0%, var(--fern) 50%, var(--salmon) 100%);
+}
+
+.open-house-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.open-house-header .open-house-icon {
+  font-size: 28px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.open-house-dates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.open-house-date-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(82, 115, 77, 0.15);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.open-house-day {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--old-growth);
+}
+
+.open-house-time {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--fern);
+}
+
+@media (max-width: 520px) {
+  .open-house-dates-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .open-house-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .open-house-header h3 {
+    font-size: 1.25rem;
+  }
+}
+
 /* Enrollment Key Facts list */
 /* Legacy hook kept for safety; prefer .facts-list */
 #enrollment .section-facts {

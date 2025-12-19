@@ -1,5 +1,6 @@
 import heroLogo from '../../assets/mbps-logo-forest.png'
 import heroImage from '../../assets/images/hero.jpg'
+import OpenHouseBanner from './OpenHouseBanner'
 
 const HeroSection = () => {
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -14,6 +15,9 @@ const HeroSection = () => {
   }
   return (
     <section className="hero">
+      {/* Open House Banner */}
+      <OpenHouseBanner />
+      
       {/* Paint-inspired background */}
       <div className="paint-bg"></div>
       
