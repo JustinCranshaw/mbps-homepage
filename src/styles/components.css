@@ -54,7 +54,8 @@
 }
 
 .open-house-date {
-  font-weight: 500;
+  font-weight: 300;
+  opacity: 0.95;
 }
 
 .open-house-banner-dot {
