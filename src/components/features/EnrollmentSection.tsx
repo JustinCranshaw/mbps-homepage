@@ -29,7 +29,7 @@ const EnrollmentSection = () => {
               <span className="open-house-time">10:00 am – 12:00 pm</span>
             </div>
             <div className="open-house-date-card">
-              <span className="open-house-day">Saturday, February 8</span>
+              <span className="open-house-day">Saturday, February 7</span>
               <span className="open-house-time">10:00 am – 12:00 pm</span>
             </div>
           </div>

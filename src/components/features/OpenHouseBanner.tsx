@@ -26,7 +26,7 @@ const OpenHouseBanner = () => {
         <span className="open-house-banner-dates">
           <span className="open-house-date">Sat, Jan 31, 10am–12pm</span>
           <span className="open-house-banner-dot">•</span>
-          <span className="open-house-date">Sat, Feb 8, 10am–12pm</span>
+          <span className="open-house-date">Sat, Feb 7, 10am–12pm</span>
         </span>
         <Link to="/#enrollment" className="open-house-banner-cta">
           Learn More
