@@ -21,7 +21,9 @@ const EnrollmentSection = () => {
             <h3 className="display-text text-2xl text-old-growth">🌟 Visit Us at Our Open House 🌟</h3>
           </div>
           <p className="body-text mb-4">
-            We warmly invite you to step inside our cozy classroom, meet our teachers, and our co-op community. No RSVP needed—just drop by and say hello. We can't wait to welcome you!
+            We warmly invite you to step inside our cozy classroom, meet our teachers, and our co-op community.
+            <br />
+            No RSVP needed—just drop by and say hello. We can't wait to welcome you!
           </p>
           <div className="open-house-dates-grid">
             <div className="open-house-date-card">
@@ -113,7 +115,7 @@ const EnrollmentSection = () => {
           <>
             <div style={{ marginTop: 12 }}>
               <a className="btn-base btn-forest" href={schoolInfo.inquiryFormEmbedUrl} target="_blank" rel="noopener noreferrer">
-                Apply or Inquire
+                Inquire About Enrollment
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginLeft: 6 }}>
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
