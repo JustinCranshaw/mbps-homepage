@@ -14,7 +14,8 @@ const EnrollmentSection = () => {
         Join our warm, nature‑rich community where play sparks learning and friendships grow. Discover a joyful preschool rooted in curiosity, care, and connection.
       </p>
 
-      {/* Open House Section */}
+      {/* Open House Section — hidden until next open house season */}
+      {false && (
       <div className="open-house-section">
         <div className="open-house-card">
           <div className="open-house-header">
@@ -41,6 +42,7 @@ const EnrollmentSection = () => {
           </div>
         </div>
       </div>
+      )}
 
       <div className="facts-grid">
         <div className="facts-text facts-card card-organic">

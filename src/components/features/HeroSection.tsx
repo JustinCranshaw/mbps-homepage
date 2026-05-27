@@ -15,8 +15,8 @@ const HeroSection = () => {
   }
   return (
     <section className="hero">
-      {/* Open House Banner */}
-      <OpenHouseBanner />
+      {/* Open House Banner — hidden until next open house season */}
+      {false && <OpenHouseBanner />}
       
       {/* Paint-inspired background */}
       <div className="paint-bg"></div>
