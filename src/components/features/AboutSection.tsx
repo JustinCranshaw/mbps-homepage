@@ -4,6 +4,19 @@ import imgInclusive from '../../assets/images/fall_picnic.jpg'
 import imgIndoorPlay from '../../assets/images/indoor_play.jpg'
 
 const AboutSection = () => {
+  const snackSchedule = [
+    {
+      time: '11:20 AM',
+      title: 'First Snack',
+      description: 'Children gather after circle and story for a simple whole grain with fruit or vegetable.',
+    },
+    {
+      time: '12:30 PM',
+      title: 'Second Snack',
+      description: 'A lighter shared snack helps children settle after clean up and before family pickup.',
+    },
+  ]
+
   return (
     <Section id="about" variant="mist" elevation="above">
       <div className="section-header text-center">
@@ -81,6 +94,40 @@ const AboutSection = () => {
           </div>
           <div className="philosophy-card-media">
             <img src={imgIndoorPlay} alt="Children engaged in indoor play and tidy-up" />
+          </div>
+        </div>
+
+        <div id="snack-time" className="snack-schedule">
+          <div className="section-header text-center">
+            <h3 className="section-title snack-schedule-title">Snack-Time Schedule</h3>
+            <p className="section-lede">
+              Snack is part of the daily rhythm: predictable, shared, and prepared with care by our cooperative community.
+            </p>
+          </div>
+
+          <div className="snack-time-grid">
+            {snackSchedule.map((snack) => (
+              <div className="snack-time-card" key={snack.time}>
+                <p className="snack-time-card__time">{snack.time}</p>
+                <h4 className="display-text text-xl text-old-growth">{snack.title}</h4>
+                <p className="body-text">{snack.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="snack-rotation-card">
+            <div>
+              <h4 className="display-text text-xl text-old-growth mb-2">Family Snack Rotation</h4>
+              <p className="body-text">
+                Families participate in preparing healthy classroom snacks on a rotating basis. The classroom schedule
+                notes who is signed up, what to bring, and any allergy or dietary updates for the week.
+              </p>
+            </div>
+            <ul className="snack-note-list">
+              <li>Whole grains, fruits, and vegetables are the everyday foundation.</li>
+              <li>Snack duties are coordinated with classroom work and school needs.</li>
+              <li>Teachers share current allergy guidance before families prepare food.</li>
+            </ul>
           </div>
         </div>
     </Section>

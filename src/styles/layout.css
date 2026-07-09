@@ -664,6 +664,96 @@
   transform: translateY(-50%);
 }
 
+#about .snack-schedule {
+  scroll-margin-top: 90px;
+  margin-top: clamp(40px, 7vw, 72px);
+  padding-top: clamp(20px, 4vw, 36px);
+}
+
+#about .snack-schedule-title {
+  font-size: clamp(1.8rem, 4vw, 2.35rem);
+}
+
+#about .snack-time-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 3vw, 24px);
+  margin-top: clamp(24px, 4vw, 36px);
+}
+
+#about .snack-time-card,
+#about .snack-rotation-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(47, 107, 58, 0.16);
+  border-radius: 8px;
+  box-shadow: 0 10px 22px rgba(19, 78, 46, 0.08);
+}
+
+#about .snack-time-card {
+  padding: clamp(20px, 3vw, 28px);
+}
+
+#about .snack-time-card__time {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 5px 10px;
+  margin: 0 0 14px;
+  border-radius: 8px;
+  background: rgba(47, 107, 58, 0.1);
+  color: var(--forest-deep);
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+#about .snack-time-card h4 {
+  margin-bottom: 10px;
+}
+
+#about .snack-rotation-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  gap: clamp(20px, 4vw, 36px);
+  align-items: start;
+  margin-top: clamp(16px, 3vw, 24px);
+  padding: clamp(22px, 4vw, 34px);
+}
+
+#about .snack-note-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  list-style: none;
+}
+
+#about .snack-note-list li {
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--text-body);
+  margin: 8px 0;
+}
+
+#about .snack-note-list li::before {
+  content: '';
+  position: absolute;
+  left: -0.9rem;
+  top: 0.72em;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--forest-medium);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  #about .snack-time-grid,
+  #about .snack-rotation-card {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Inquiry embed */
 /* Modal */
 .modal-overlay { position: fixed; inset: 0; z-index: 1000; }
